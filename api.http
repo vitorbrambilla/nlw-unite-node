@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "Novo evento",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/d4c65e7d-763e-42ac-b23f-ab4736641f05/attendees
+Content-Type: application/json
+
+{
+    "name": "Vitor Reis",
+    "email": "vitor@email.com"
+}
+
+###
+
+GET http://localhost:3333/events/d4c65e7d-763e-42ac-b23f-ab4736641f05
+
+###
+
+GET http://localhost:3333/attendees/2/badge
+
+###
+
+GET http://localhost:3333/attendees/3/check-in
+
+###
+
+GET http://localhost:3333/events/d4c65e7d-763e-42ac-b23f-ab4736641f05/attendees?query=Vitor
